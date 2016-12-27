@@ -3,54 +3,14 @@
 
 <head>
   <title>Tennis League</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
 
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">The Friendly Tennis League</span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a id="about" class="mdl-navigation__link" href="#">
-            About
-          </a>
-          <div class="mdl-tooltip mdl-tooltip--large" for="about">
-            Tennis League Manager
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">About</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#">Tennis League Manager. Built with ES6 and Node.</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-      <div class="page-content">
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet">
-            <h4>Leagues</h4>
-            <div id="leaguesList"></div>
-          </div>
-
-          <div id="leagueDetail"></div>
-
-        </div>
-      </div>
-    </main>
-  </div>
+  <div id="app"></div>
 
   <script src="bundle.js"></script>
-  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
 </body>
 
 </html>
