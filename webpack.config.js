@@ -1,5 +1,5 @@
 module.exports = {
-  entry: ['babel-polyfill', './src/main.js'],
+  entry: ['whatwg-fetch', './src/App.js'],
   output: {
     path: './public/',
     filename: 'bundle.js'
@@ -12,7 +12,7 @@ module.exports = {
         loader: 'babel',
         exclude: /node_modules/,
         query: {
-          presets: ['es2015']
+          presets: ['es2015', 'react']
         }
       }
     ]
