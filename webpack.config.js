@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/App.js',
+  entry: ['whatwg-fetch', './src/App.js'],
   output: {
     path: './public/',
     filename: 'bundle.js'
