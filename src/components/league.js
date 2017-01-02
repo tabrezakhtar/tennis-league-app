@@ -1,8 +1,17 @@
 import React from 'react';
 
-const League = ({league}) =>
-  <li>
-    {league.name} {league.location} {league.members} {league.created.toString()}
-  </li>;
+class League extends React.Component {
+  handleClick() {
+    console.log('this is:', this);
+  }
+
+  render() {
+    return (
+      <li onClick={e => this.handleClick(e)}>
+        {this.props.league.name} {this.props.league.location} {this.props.league.members} {this.props.league.created.toString()}
+      </li>
+    );
+  }
+}
 
 export default League;
