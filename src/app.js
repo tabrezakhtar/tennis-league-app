@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import LeaguesList from './components/leaguesList';
 import LeagueDetail from './components/leagueDetail';
+import TopMenu from './components/topMenu';
 
 class App extends React.Component {
 
@@ -20,7 +21,7 @@ class App extends React.Component {
     return (
       <MuiThemeProvider>
         <div>
-          <h1>Leagues List</h1>
+          <TopMenu />
           <LeaguesList leagues={this.state.leagues} />
           <LeagueDetail />
         </div>
