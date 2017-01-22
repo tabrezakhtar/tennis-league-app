@@ -1,18 +1,25 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 import League from './league';
 
 class LeaguesList extends React.Component {
   render() {
     return (
-      <div>
-        <RaisedButton label="Default" />
-        <ul>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderColumn>Name</TableHeaderColumn>
+            <TableHeaderColumn>Location</TableHeaderColumn>
+            <TableHeaderColumn>Members</TableHeaderColumn>
+            <TableHeaderColumn>Date Created</TableHeaderColumn>
+          </TableRow>
+        </TableHeader>
+        <TableBody displayRowCheckbox={ true }>
           {this.props.leagues.map(league => {
             return <League league={league} key={league.id} />;
           })}
-        </ul>
-      </div>
+        </TableBody>
+      </Table>
     );
   }
 }

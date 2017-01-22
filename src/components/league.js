@@ -1,15 +1,19 @@
 import React from 'react';
+import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 
 class League extends React.Component {
   handleClick() {
-    console.log('this is:', this);
+    console.log('row click:', this);
   }
 
   render() {
     return (
-      <li onClick={e => this.handleClick(e)}>
-        {this.props.league.name} {this.props.league.location} {this.props.league.members} {this.props.league.created.toString()}
-      </li>
+      <TableRow onClick={e => this.handleClick(e)}>
+        <TableRowColumn>{this.props.league.name}</TableRowColumn>
+        <TableRowColumn>{this.props.league.location}</TableRowColumn>
+        <TableRowColumn>{this.props.league.members}</TableRowColumn>
+        <TableRowColumn>{this.props.league.created.toString()}</TableRowColumn>
+      </TableRow>
     );
   }
 }
