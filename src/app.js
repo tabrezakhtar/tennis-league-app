@@ -1,6 +1,8 @@
 import React from 'react';
 import 'whatwg-fetch';
 import {render} from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import LeaguesList from './components/leaguesList';
 import LeagueDetail from './components/leagueDetail';
 
@@ -16,11 +18,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Leagues List</h1>
-        <LeaguesList leagues={this.state.leagues} />
-        <LeagueDetail />
-      </div>
+      <MuiThemeProvider>
+        <div>
+          <h1>Leagues List</h1>
+          <LeaguesList leagues={this.state.leagues} />
+          <LeagueDetail />
+        </div>
+      </MuiThemeProvider>
     );
   }
 
@@ -36,4 +40,5 @@ class App extends React.Component {
   }
 }
 
+injectTapEventPlugin();
 render(<App />, document.getElementById('app'));
