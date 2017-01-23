@@ -13,8 +13,10 @@
   "author": "Tabrez Akhtar",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.4.7",
     "express": "^4.14.0",
     "material-ui": "^0.16.7",
+    "mongodb": "^2.2.21",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.1",
