@@ -3,7 +3,7 @@ Web app to manage tennis leagues and matches.
 
 
 ### Prerequisites
-Node v6.3.0
+>= Node v6.3.0
 
 ### How to run
 `git clone https://github.com/tabrezakhtar/tennis-league-app.git`
